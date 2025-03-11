@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import axios from "axios";
 import Link from "next/link";
 
 const API_URL = "https://leadflowbackend.onrender.com/api/lead/add";
@@ -53,6 +52,7 @@ export default function AddLeadPage() {
                 throw new Error("Failed to add lead");
             }
         } catch (err) {
+            console.log(err);
             setError("Failed to add lead. Please try again.");
         }
         
