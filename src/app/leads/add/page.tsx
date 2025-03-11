@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
-const API_URL = "https://leadflowbackend.onrender.com/api/lead/add";
+const API_URL = "https://leadflowbackend.onrender.com/api/lead";
 
 export default function AddLeadPage() {
     const router = useRouter();
