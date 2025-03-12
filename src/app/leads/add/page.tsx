@@ -41,6 +41,9 @@ export default function AddLeadPage() {
                 },
                 body: JSON.stringify({ name, email, status }),
             });
+
+            console.log(response);
+            
         
             if (response.ok) {
                 setSuccess("Lead added successfully!");
