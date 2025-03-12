@@ -42,25 +42,22 @@ export default function AddLeadPage() {
                 body: JSON.stringify({ name, email, status }),
             });
 
-            const resData = await response.json();  // 👈 پاسخ رو پردازش کن
-            console.log(resData); 
-            
+            const resData = await response.json();  
         
-            if (response.ok) {
-                setSuccess("Lead added successfully!");
+            if (!resData.errorMessage) {
+                setSuccess(resData.successMessage);
                 setName("");
                 setEmail("");
                 setStatus("New");
                 router.push("/leads")
             } else {
-                throw new Error("Failed to add lead");
+                setError(resData.errorMessage);
             }
         } catch (err) {
             console.log(err);
             setError("Failed to add lead. Please try again.");
         }
         
-
         setLoading(false);
     };
 
