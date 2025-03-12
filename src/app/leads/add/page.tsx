@@ -50,6 +50,7 @@ export default function AddLeadPage() {
                 setEmail("");
                 setStatus("New");
                 router.push("/leads")
+                setTimeout(() => router.push("/leads"), 1000);
             } else {
                 setError(resData.errorMessage);
             }
