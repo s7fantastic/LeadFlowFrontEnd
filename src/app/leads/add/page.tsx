@@ -42,7 +42,8 @@ export default function AddLeadPage() {
                 body: JSON.stringify({ name, email, status }),
             });
 
-            console.log(response);
+            const resData = await response.json();  // 👈 پاسخ رو پردازش کن
+            console.log(resData); 
             
         
             if (response.ok) {

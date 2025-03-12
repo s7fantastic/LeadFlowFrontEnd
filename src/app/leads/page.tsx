@@ -70,7 +70,7 @@ export default async function LeadsPage() {
                       {lead.status}
                     </span>
                   </td>
-                  <td className="p-3">{new Date(lead.createdAt).toLocaleDateString()}</td>
+                  <td className="p-3">{new Date(lead.createdAt).toLocaleDateString("en-CA")}</td>
                 </tr>
               ))}
             </tbody>
